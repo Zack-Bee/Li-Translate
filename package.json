@@ -1,0 +1,22 @@
+{
+    "name": "li-translate",
+    "version": "1.0.0",
+    "description": "简单快捷的翻译扩展，支持划词翻译、单词本等多种特性",
+    "keywords": [
+        "translate",
+        "extention"
+    ],
+    "author": {
+        "email": "zackbee.geek@gmail.com",
+        "name": "ZackBee",
+        "url": "http://www.zackbee.cn"
+    },
+    "devDependencies": {
+        "gulp": "latest",
+        "gulp-changed": "latest",
+        "gulp-clean-css": "^3.9.0",
+        "gulp-uglify": "latest",
+        "pump": "^1.0.2"
+    },
+    "dependencies": {}
+}

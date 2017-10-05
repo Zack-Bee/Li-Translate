@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/popup.css">
+</head>
+
+<body>
+    <header id="header">
+        <ul class="nav-bar">
+            <li class="nav-btn">
+                <a id="toNote" tabindex="0">
+                            <img src="./img/note.png" width="26px" height="26px">                            
+                            <p class="font-note">Note</p>
+                        </a>
+            </li>
+            <li class="nav-btn">
+                <a id="toTranslate" tabindex="0">
+                    <img src="./img/translate.png" width="26px" height="26px">
+                    <p class="font-translate">Translate</p>
+                </a>
+            </li>
+            <li class="nav-btn">
+                <a id="toSetting" tabindex="0">
+                    <img src="./img/setting.png" width="26px" height="26px">                            
+                    <p class="font-setting">Setting</p>
+                </a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <section class="page" id="translatePage">
+            <header>
+                <input id="search" type="text" placeholder="text to translate" autocomplete="off" autofocus="autofocus">
+            </header>
+            <main>
+                <div class="btn-wrapper"><button class="note-btn" title="做笔记" id="noteBtn" type="button">NOTE</button></div>
+                <div class="translation-group-wrapper" id="searchResult">
+                    <div class="translation-group">
+                        <p class="search-item">按Enter进行查询</p>
+                    </div>
+                </div>
+            </main>
+        </section>
+        <section class="page notePage" id="notePage">
+            <header id="noteNavBtns">
+                <a class="note-nav-btn" title="prev" id="prev"></a>
+                <div class="count">
+                    <span id="current">15</span>/<span id="total">16</span>
+                </div>
+                <a class="note-nav-btn" title="next" id="next"></a>
+            </header>
+            <main>
+                <div class="btn-wrapper"><button class="note-btn" title="复制" id="copyBtn" type="button">COPY</button></div>
+                <div class="translation-group-wrapper" id="noteResult">
+                    <div class="translation-group">
+                        <p class="search-item">fantastic</p>
+                        <p class="translation">n. 古怪的人</p>
+                        <p class="translation">adj. 奇异的；空想的；极好的；不可思议的</p>
+                    </div>
+                </div>
+            </main>
+        </section>
+        <section class="page settingPage " id="settingPage">
+            <header>
+                <h1 class="setting-h1">Setting</h1>
+            </header>
+            <main>
+                <div class="translation-group-wrapper">
+                    <div class="translation-group">
+                        <div class="setting-item">
+                            划词翻译(ctrl+shift+s)
+                            <div class="setting-btn-wrapper">
+                                <div class="setting-btn setting-btn-hidden" id="settingBtn"></div>
+                            </div>
+                        </div>
+                        <div class="setting-item">
+                            开关弹窗(ctrl+shift+f)
+                        </div>
+                        <div class="setting-item">
+                            说明：COPY按钮是将笔记中的所有单词复制，在其他地方粘贴即可。笔记一天清空一次。
+                        </div>
+                        <div class="setting-item">更多信息请点击<a href="https://chrome.google.com/webstore/search/youdao?utm_source=chrome-ntp-icon">此处</a></div>
+                    </div>
+                </div>
+            </main>
+        </section>
+    </main>
+    <script src="js/popup.js"></script>
+</body>
+
+</html>

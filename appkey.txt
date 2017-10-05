@@ -1,0 +1,12 @@
+# myself
+7fbe8cb3593cb20c
+#chaZD
+https://fanyi.youdao.com/openapi.do?keyfrom=youdaocidian&key=1116151381&type=data&doctype=json&version=1.1&q=
+
+# bing
+("https://www.bing.com/translator/api/Translate/TranslateArray?"+o,{method:"POST",headers:{Accept:"*/*","Cache-Control":"no-cache","Access-Control-Allow-Headers":"*","Access-Control-Allow-Origin":"null","content-type":"application/json",Expires:"-1",Pragma:"no-cache",Server:"Microsoft-IIS/8.5"},data:[{text:e}]})
+
+#youdao
+http://dict.youdao.com/fsearch?client=deskdict&keyfrom=chrome.extension&q='+encodeURIComponent(word)+'&pos=-1&doctype=xml&xmlVersion=3.2&dogVersion=1.0&vendor=unknown&appVer=3.1.17.4208&le=eng
+
+http://dict.youdao.com/fsearch?client=deskdict&keyfrom=chrome.extension&q= &pos=-1&doctype=xml&xmlVersion=3.2&dogVersion=1.0&vendor=unknown&appVer=3.1.17.4208&le=eng

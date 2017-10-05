@@ -1,0 +1,325 @@
+/* 重置 */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 280px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:focus {
+    outline: none;
+}
+
+/*  */
+main {
+    font-size: 18px;
+    min-height: 60px;
+}
+
+#header {
+    position: fixed;
+    width: 210px;
+    top: -34px;
+    left: 25px;
+    padding: 0 10px;
+    transition: top 0.5s linear;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 2;
+    border-radius: 8px;
+}
+
+#header:hover {
+    top: 0px;
+}
+
+.nav-bar {
+    overflow: visible;
+}
+
+.nav-btn {
+    float: left;
+    width: 33.3%;
+    margin-top: 5px;
+    transition: transform 0.2s linear;
+}
+
+.nav-btn img {
+    display: block;
+    margin: 0 auto;
+    width: 26px;
+    height: 26px;
+}
+
+.nav-btn:hover {
+    transform: scale(1.2);
+}
+
+.nav-btn p {
+    margin: 2px;
+    font-size: 16px;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+.font-translate {
+    color: #559df3;
+}
+
+.font-note {
+    color: #2ec4b6;
+}
+
+.font-setting {
+    color: #ff9f1c;
+}
+
+#search {
+    display: block;
+    font-size: 18px;
+    border-width: 3px 0 3px 0;
+    border-style: solid;
+    border-color: #559df3;
+    padding: 5px;
+    margin: 20px auto 0 auto;
+    color: #333;
+}
+
+#search:focus {
+    outline: none;
+}
+
+#search::-webkit-input-placeholder {
+    color: #559df3;
+}
+
+.btn-wrapper {
+    width: 228px;
+    margin: 5px auto 0 auto;
+    padding: 0 30px;
+}
+
+.note-btn {
+    background-color: #3fc5c7;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 3px 6px;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s linear;
+}
+
+.saved {
+    outline: none;
+    border-color: #0db3a5;
+    position: relative;
+    background-color: #1db3a5;
+}
+
+.note-btn:focus {
+    outline: none;
+}
+
+.translation-group-wrapper {
+    width: 230px;
+    margin: 5px auto 10px auto;
+    height: 220px;
+    overflow-y: scroll;
+}
+
+.translation-group-wrapper::-webkit-scrollbar {
+    width: 3px;
+}
+ 
+.translation-group-wrapper::-webkit-scrollbar-track {
+    background-color: #eef5fe;
+}
+
+/* 为了粗线条的颜色与整体的2ec4b6达到和谐，这里把颜色提亮了一点 */
+.translation-group-wrapper::-webkit-scrollbar-thumb {
+    background-color: #2fc5c7;
+}
+
+.translation-group {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.translation-group p {
+    margin: 5px auto;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #eef5fe;
+}
+
+.translation {
+    font-size: 12px;
+    color: #333;
+}
+
+.search-item {
+    color: #559df3;
+    font-size: 16px;
+}
+
+.page {
+    top: 20px;
+    width: 280px;  
+    height: 292px;
+}
+
+.notePage {
+    position: fixed;
+    background-color: #fff;
+    left: -280px;
+    transition: left 0.4s ease-in-out;
+    z-index: 1;
+}
+
+#noteNavBtns {
+    width: 210px;
+    margin: 0 auto;
+    font-size: 0;
+    padding: 5px;
+    border-width: 3px 0 3px 0;
+    border-color: #2ec4b6;
+    border-style: solid;
+}
+
+#noteNavBtns a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.count {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+    width: 170px;
+    vertical-align: middle;
+}
+
+#prev {
+    background-image: url("../img/prev.png");
+    vertical-align: middle;
+}
+
+#next {
+    vertical-align: middle;
+    background-image: url("../img/next.png");
+}
+
+#current {
+    color: #2ec4b6;
+}
+
+#total {
+    color: #444;    
+}
+
+.notePage .search-item {
+    color: #2ec4b6;
+}
+
+.settingPage {
+    position: fixed;
+    transition: left 0.4s ease-in-out;
+    left: 280px;
+    background-color: #fff;
+}
+
+.setting-h1 {
+    width: 220px;
+    padding: 5px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    color: #ff9f1c;
+    border-width: 3px 0;
+    border-style: solid;
+    border-color: #ff9f1c;
+    line-height: 20px;
+}
+
+.setting-item {
+    color: #ff9f1c;
+    margin: 5px auto;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #eef5fe;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.setting-btn-wrapper {
+    float: right;
+}
+
+.setting-btn {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 25px;
+    box-shadow:inset 0 0 0 0 #eee;
+    border: 1px solid #dfdfdf;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: background-color 0.3s ease-out;
+    cursor: pointer;
+    top: 50%;
+    margin-left: 30px;
+}
+
+.setting-btn-hidden {
+    background-color: #fdfdfd;
+}
+
+.setting-btn-show {
+    background-color: #ff9f1c;
+}
+
+.setting-btn::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    border: 1px solid #f0f0f0;
+    background-color: #fff;
+    top: 0;
+    transition: left 0.3s,right 0.3s ease-out;
+}
+
+.setting-btn-hidden::after{
+    left: 0;
+}
+
+.setting-btn-show::after{
+    left: 15px;
+    right: 0;
+}
+
+.show {
+    left: 0;
+}
+
+.setting-item a {
+    color: #ff9f1c;
+    text-decoration: underline;
+}
