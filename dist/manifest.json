@@ -40,15 +40,15 @@
   "browser_action": {
     "default_title": "",
     "default_icon": {
-      "19": "icons/icon19.png",
-      "38": "icons/icon38.png"
+      "19": "icons/icon.png",
+      "38": "icons/icon.png"
     },
     "default_popup": "popup.html"
   },
   "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
+    "16": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
   },
   "commands": {
     "toggle-translate-selected": {

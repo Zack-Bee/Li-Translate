@@ -144,6 +144,7 @@ Li.showResult = function (word, node, isSaved) {
 // 进行查询
 Li.query = function (query, node) {
     "use strict";
+    // console.log(Li.currentWord);
     // console.log(query);
     if (Li.savedQuery.indexOf(query) > -1) {
 
@@ -167,19 +168,26 @@ Li.query = function (query, node) {
 // 监听选中
 Li.listenSelect = function () {
     var root = document.getElementById("Li-root");
+
+    // 在result内进行点击的话，不隐藏result 
     root.addEventListener("mouseup", function (event) {
         event.stopPropagation();
-    })
+    });
+
     window.addEventListener("mouseup", function (event) {
-        var range = (window.getSelection && window.getSelection()) ||
+        // console.log(event.target);
+        var selection = (window.getSelection && window.getSelection()) ||
             (document.getSelection && document.getSelection()),
-            query = range.toString().trim(),
+            query = selection.toString().trim(),
             root = document.
                 getElementById("Li-root"),
             searchResult = document.getElementById("Li-searchResult"),
             noteBtn = document.getElementById("Li-noteBtn");
         pageX = event.pageX,
         pageY = event.pageY;
+        // console.log("selection.rangeCount");
+        // console.log(selection.rangeCount);
+        // console.log(typeof query);
         // console.log(query);
         root.style.display = "none";
         if (!query || !Li.setting.translateSelected) {
@@ -196,14 +204,18 @@ Li.listenSelect = function () {
         if (pageX > document.body.offsetWidth * 0.6) {
             root.style.left = pageX - root.offsetWidth +
                 "px";
+            // console.log(root.style.left);
         } else {
             root.style.left = pageX + "px";
+            // console.log(root.style.left);            
         }
         if (top + root.offsetHeight > document.body.offsetHeight) {
             root.style.top = pageY - root.offsetHeight +
                 "px";
+                // console.log(root.style.top);                
         } else {
             root.style.top = pageY + "px";
+            // console.log(root.style.top);            
         }
     });
 }
