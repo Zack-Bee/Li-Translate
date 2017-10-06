@@ -1,7 +1,8 @@
 # Li-Translate
 
 ## 示例
-![外观]()
+![使用](https://raw.githubusercontent.com/Zack-Bee/Li-Translate/master/example/1400and560.png)
+![外观](https://raw.githubusercontent.com/Zack-Bee/Li-Translate/master/example/640and400.png)
 ## 下载地址
 [直接下载](https://raw.githubusercontent.com/Zack-Bee/Li-Translate/master/Li-Translate.crx)
 [chrome应用商店](https://chrome.google.com/webstore/detail/li-translate/lkmgcjbiibdplimdmngmkpgeolaplgfd?hl=zh-CN)
