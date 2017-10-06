@@ -1,10 +1,10 @@
 # Li-Translate
 
 ## 示例
-
+![外观]()
 ## 下载地址
-
-
+[直接下载](https://raw.githubusercontent.com/Zack-Bee/Li-Translate/master/Li-Translate.crx)
+[chrome应用商店](https://chrome.google.com/webstore/detail/li-translate/lkmgcjbiibdplimdmngmkpgeolaplgfd?hl=zh-CN)
 ## 已支持的特性
 
 * 划词翻译
