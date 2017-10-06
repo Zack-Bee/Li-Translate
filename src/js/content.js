@@ -7,7 +7,7 @@ var Li = {};
         day = date.getUTCDay();
     Li.notWords = ["Li-setting", "" + year + "." + month + "." + day];
     Li.today = "" + year + "." + month + "." + day;
-})()
+})();
 Li.init = true;
 Li.currentWord = {};
 Li.savedWords = [];
@@ -101,6 +101,8 @@ Li.init = function () {
     root.id = "Li-root";
     document.body.appendChild(root);
     document.head.appendChild(style);
+    root.style.left = "-99999px";
+    root.style.top = "-99999px";
 }
 
 // 显示结果
@@ -174,7 +176,7 @@ Li.listenSelect = function () {
         event.stopPropagation();
     });
 
-    window.addEventListener("mouseup", function (event) {
+    document.documentElement.addEventListener("mouseup", function (event) {
         // console.log(event.target);
         var selection = (window.getSelection && window.getSelection()) ||
             (document.getSelection && document.getSelection()),
