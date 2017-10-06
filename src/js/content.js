@@ -144,6 +144,7 @@ Li.showResult = function (word, node, isSaved) {
 // 进行查询
 Li.query = function (query, node) {
     "use strict";
+    // console.log(query);
     if (Li.savedQuery.indexOf(query) > -1) {
 
         // 如果查询的词在savedQuery中，则使用savedWords中是数据
@@ -163,6 +164,7 @@ Li.query = function (query, node) {
     }
 }
 
+// 监听选中
 Li.listenSelect = function () {
     var root = document.getElementById("Li-root");
     root.addEventListener("mouseup", function (event) {
@@ -177,7 +179,7 @@ Li.listenSelect = function () {
             searchResult = document.getElementById("Li-searchResult"),
             noteBtn = document.getElementById("Li-noteBtn");
         pageX = event.pageX,
-            pageY = event.pageY;
+        pageY = event.pageY;
         // console.log(query);
         root.style.display = "none";
         if (!query || !Li.setting.translateSelected) {
@@ -185,7 +187,7 @@ Li.listenSelect = function () {
         }
         // console.log(root);
         // 发送查询
-        if (query && !Li.isEmpty(query)) {
+        if (query && query !== null) {
             Li.query(query, document.getElementById("Li-searchResult"));
         }
 
@@ -215,21 +217,19 @@ Li.listenNoteBtnClick = function () {
             var index = Li.savedQuery.indexOf(Li.currentWord);
             Li.savedQuery.splice(index, 1);
             Li.savedWords.splice(index, 1);
-            var obj = {};
-            obj.words = Li.savedWords;
-            chrome.storage.sync.set(obj);
             // console.log("Li.savedWords");
             // console.log(Li.savedWords);
         } else {
-            var obj = {};
-            obj.words = Li.savedWords;
+            
             noteBtn.classList.add("Li-saved");
             Li.savedQuery.push(Li.currentWord.word);
             Li.savedWords.push(Li.currentWord);
-            chrome.storage.sync.set(obj);
             // console.log("Li.savedWords");
             // console.log(Li.savedWords);
         }
+        var obj = {};
+        obj.words = Li.savedWords;
+        chrome.storage.sync.set(obj);        
     });
 }
 Li.init();

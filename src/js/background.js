@@ -5,8 +5,8 @@ Li.setting = {};
 Li.setting.translateSelected = false;
 // 打算使用通用的方式实现content与background的通信以及popup与background的通信，然而失败了
 chrome.runtime.onConnect.addListener(function (port) {
-    port.onMessage.addListener(function (msg) {
-        // console.log("form popup query: " + msg);
+    port.onMessage.addListener(function (query) {
+        // console.log("form popup query: " + query);
 
         // 网络搜索
         function searchOnline(query) {
@@ -73,14 +73,14 @@ chrome.runtime.onConnect.addListener(function (port) {
         }
         // console.log("online?: " + navigator.onLine);
         if (navigator.onLine) {
-            searchOnline(msg);
+            searchOnline(query);
         } else {
-            searchOnline(msg);
+            searchOnline(query);
         }
     })
 });
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-    // // console.log(request);
+    console.log(request);
     function searchOnline(query) {
         var urlPrefix = "http://dict.youdao.com/fsearch?client=deskdict" +
             "&keyfrom=chrome.extension&q=",
@@ -144,9 +144,9 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         })
     }
     if (navigator.onLine) {
-        searchOnline();
+        searchOnline(request);
     } else {
-        searchOffline();
+        searchOffline(request);
     }
     return true;
 });

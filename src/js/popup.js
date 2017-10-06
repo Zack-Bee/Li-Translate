@@ -260,6 +260,9 @@ Li.listenNoteBtnClick = function () {
             // console.log("Li.savedWords");
             // console.log(Li.savedWords);
         }
+        var obj = {};
+        obj.words = Li.savedWords;
+        chrome.storage.sync.set(obj);
     });
 }
 
