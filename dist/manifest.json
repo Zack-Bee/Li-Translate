@@ -1,7 +1,7 @@
 {
   "name": "Li-Translate",
   "description": "简单快捷的翻译扩展，支持划词翻译、单词本等多种特性",
-  "version": "0.9.10",
+  "version": "0.9.11",
   "permissions": [
     "http://www.zackbee.cn/*",
     "https://dict.youdao.com/*",
