@@ -25,9 +25,6 @@
       "js": [
         "js/content.js"
       ],
-      "css": [
-        "css/content.css"
-      ],
       "all_frames": true,
       "matches": [
         "<all_urls>"

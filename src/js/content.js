@@ -90,24 +90,17 @@ Li.init = function () {
     })
 
     // 建立节点
-    var root = document.createElement("div");
+    var root = document.createElement("div"),
+        style = document.createElement("style");
+    style.innerHTML = "#Li-root{padding-top:10px!important;z-index:999!important;position:absolute!important;box-shadow:10px 10px 10px rgba(0,0,0,.4)!important;background-color:#fff!important;outline:5px solid #eef5fe!important;color:#444!important;width:250px!important;height:265px!important;float:none!important}#Li-root *{float:none!important;background-color:#fff!important;width:unset!important;height:unset!important}#Li-root .Li-btn-wrapper{width:190px!important;margin:5px 20px!important;padding:0 10px!important}#Li-root .Li-note-btn{background-color:#3fc5c7!important;border:1px solid transparent!important;border-radius:4px!important;font-size:14px!important;padding:3px 6px!important;font-weight:400!important;color:#fff!important;cursor:pointer!important;transition:background-color .3s linear!important}#Li-root .Li-saved{outline:0!important;border-color:#0db3a5!important;position:relative!important;background-color:#1db3a5!important}#Li-root .Li-note-btn:focus{outline:0!important}#Li-root .Li-translation-group-wrapper{width:200px!important;margin:5px auto 10px auto!important;height:220px!important;overflow-y:scroll!important}#Li-root .Li-translation-group-wrapper::-webkit-scrollbar{width:3px!important}#Li-root .Li-translation-group-wrapper::-webkit-scrollbar-track{background-color:#eef5fe!important}#Li-root .Li-translation-group-wrapper::-webkit-scrollbar-thumb{background-color:#2fc5c7!important}#Li-root .Li-translation-group{background-color:#fff!important;border-radius:5px!important;padding:5px!important}#Li-root .Li-translation-group p{margin:5px auto!important;padding:5px!important;border-radius:5px!important;background-color:#eef5fe!important}#Li-root .Li-translation{font-size:12px!important;color:#333!important}#Li-root .Li-search-item{color:#559df3!important;font-size:16px!important}";
     root.innerHTML = '<div class="Li-btn-wrapper">' +
         '<button class="Li-note-btn" title="做笔记" ' +
         'id="Li-noteBtn" type="button">NOTE</button></div>' +
         '<div class="Li-translation-group-wrapper" ' +
         'id="Li-searchResult"></div>';
     root.id = "Li-root";
-    root.style.paddingTop = '10px!important';
-    root.style.zIndex = '999!important';
-    root.style.position = 'absolute!important';
-    root.style.boxShadow = '10px 10px 10px rgba(0, 0, 0, 0.4)!important';
-    root.style.backgroundColor = '#fff!important';
-    root.style.outline = '5px solid #eef5fe!important';
-    root.style.color = '#444!important';
-    root.style.width = '250px!important';
-    root.style.height = '265px!important';
-    root.style.display = "none";
     document.body.appendChild(root);
+    document.head.appendChild(style);
 }
 
 // 显示结果
@@ -192,7 +185,9 @@ Li.listenSelect = function () {
         }
         // console.log(root);
         // 发送查询
-        Li.query(query, document.getElementById("Li-searchResult"));
+        if (query && !Li.isEmpty(query)) {
+            Li.query(query, document.getElementById("Li-searchResult"));
+        }
 
         // 将答案显示在页面上
         root.style.display = "block";

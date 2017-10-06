@@ -225,7 +225,9 @@ Li.listenEnter = function () {
                 query = document.getElementById("search").value.trim();
             document.getElementById("noteBtn").classList.remove("saved");
             node.innerHTMl = '<p class="search-item">正在查询，请稍等</p>';
-            Li.query(query, node);
+            if (query && !Li.isEmpty(query)) {
+                Li.query(query, node);
+            }
         }
     });
 }

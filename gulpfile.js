@@ -1,6 +1,7 @@
 const gulp = require("gulp");
 const changed = require("gulp-changed");
 const cleanCSS = require('gulp-clean-css');
+const uglify = require('gulp-uglify');
 const pump = require('pump');
 
 const DIST = "./dist";
@@ -21,7 +22,7 @@ gulp.task("move", function () {
         pipe(gulp.dest(DIST + "/img"));
 });
 
-gulp.task('compressCss', function (cb) {
+gulp.task('minCss', function (cb) {
     pump([
         gulp.src('./src/css/*.css'),
         cleanCSS(),
@@ -29,10 +30,10 @@ gulp.task('compressCss', function (cb) {
     ], cb);
 });
 
-gulp.task("compressJs", function (cb) {
+gulp.task("minJs", function (cb) {
     pump([
         gulp.src('./src/js/*.js'),
-        cleanCSS(),
+        uglify(),
         gulp.dest("./dist/js")
     ], cb);
 })
