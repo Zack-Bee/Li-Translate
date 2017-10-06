@@ -5,6 +5,7 @@
 ![外观](https://raw.githubusercontent.com/Zack-Bee/Li-Translate/master/example/640and400.png)
 ## 下载地址
 [直接下载](https://raw.githubusercontent.com/Zack-Bee/Li-Translate/master/Li-Translate.crx)
+
 [chrome应用商店](https://chrome.google.com/webstore/detail/li-translate/lkmgcjbiibdplimdmngmkpgeolaplgfd?hl=zh-CN)
 ## 已支持的特性
 
@@ -31,7 +32,12 @@
 * 将当前查询词加入笔记的快捷键
 * 更大的笔记容量以及本地存储的容量
 
-## 
+## 其他
+部分特性参照了chaZD，外观参照了translate and remember之前一直用的是chaZD，最近感觉用着不
+舒服，就趁着国庆自己写了一个。
+遇到什么bug、想到什么好的特性、对ui有什么想法以及能够提供更棒的翻译api等等都能给我发送邮件
+zackbee.geek@gmail.com。这个东西只要我还用的话应该会一直维护的，也欢迎大家fork和star。
+最后感谢替我做icon的童兆伟，切图的隔壁老王以及宁宁学姐和学姐的学长帮助我认证了开发者。
 ## GPL LICENSE
                    GNU LESSER GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
