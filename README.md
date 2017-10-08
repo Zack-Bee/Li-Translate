@@ -2,7 +2,7 @@
 
 ## 示例
 ![使用](https://raw.githubusercontent.com/Zack-Bee/Li-Translate/master/example/popup.gif)
-[![ScreenShot](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](https://raw.githubusercontent.com/Zack-Bee/Li-Translate/master/example/content.mp4)
+[点击查看视频](https://raw.githubusercontent.com/Zack-Bee/Li-Translate/master/example/content.mp4)
 ## 下载地址
 [直接下载](https://raw.githubusercontent.com/Zack-Bee/Li-Translate/master/release/Li-Translate.crx)
 
